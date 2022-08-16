@@ -1,9 +1,15 @@
 # dbt_workshop
+
 Willkommen beim dbt Workshop für (leicht) Fotgeschrittene. 
-Die Annahme bei diesem Workshop ist, dass zum Beispiel erste Schritte im Workflow mit `dbt run` und `dbt test` bereits bekannt sind. Außerdem wird vorausgesetzt, dass man ungefähr weiß, was das `profiles.yml` und `dbt_project.yml` machen. 
+Die Annahme bei diesem Workshop ist, dass zum Beispiel erste Schritte im Workflow mit `dbt run` und `dbt test` bereits bekannt sind. Außerdem wird vorausgesetzt, dass man ungefähr weiß, was das `profiles.yml` und `dbt_project.yml` machen.  
 Themen, die bei diesem Workshop behandelt werden sollen sind:  
 1. *macros*: Jinja Macros sind ein zentrales Feature von dbt und erweitern stark die Möglichkeiten, die man durch SQL im ELT-Prozess hat  
 2. *incremental*: Incremental Loads haben zum Beispiel Performanz-Vorteile gegenüber Full Loads, kommen aber auch mit zusätzlichen Anforderungen zu Design-Fragen und Komplexität  
+
+## Projekt-Skizze
+
+
+
 ## Installation
 *ACHTUNG* Das Projekt ist ein Work in Progress und es kann nicht garantiert werden, dass die Installation immer 100%ig funktioniert.  
 Zum entwickeln wird gerade eine sqlite "Datenbank" genutzt. Das Repo enthält ein environment, insofern kann man zur anstelle einer Installation auch  
