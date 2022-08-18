@@ -1,1 +1,1 @@
-SELECT * FROM {{ref('raw_penguins')}}
+SELECT *,{{current_timestamp()}} as insert_ts FROM {{ref('raw_penguins')}}

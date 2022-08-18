@@ -25,12 +25,15 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 
+
+## The following jinja if functions to define schema names are necessary
+## because sqlite does not handle schemas very well
+## in a "normal" database we would like to separate stage from core etc.  
 seeds:
-  +schema: seed_data
+  +schema: "{{ 'seed' if 'sqlite' not in target.name else None}}"
 
 models:
   dbt_workshop:
-    # Config indicated by + and applies to all files under models/example/
     A1_FAKE_STAGE:
-      +schema: A1_FAKE_STAGE
+      +schema: "{{ 'A1_FAKE_STAGE' if 'sqlite' not in target.name else None }}"
       +materialized: table
