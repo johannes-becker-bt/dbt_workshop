@@ -39,4 +39,4 @@ models:
       +materialized: table
     A2_INCREMENTAL_WAREHOUSE:
       +schema: "{{ 'WAREHOUSE' if 'sqlite' not in target.name else None }}"
-      +materialized: "{{ 'incremental' if 'sqlite' not in target.name else 'table' }}"
+      +materialized: incremental
