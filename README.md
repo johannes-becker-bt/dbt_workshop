@@ -12,12 +12,10 @@ Themen, die bei diesem Workshop behandelt werden sollen sind:
 
 ## Installation
 *ACHTUNG* Das Projekt ist ein Work in Progress und es kann nicht garantiert werden, dass die Installation immer 100%ig funktioniert.  
-Zum entwickeln wird gerade eine sqlite "Datenbank" genutzt. Das Repo enthält ein environment, insofern kann man zur anstelle einer Installation auch  
-`source env_dbt_ws/bin/activate`  
-nutzen. Alternativ wäre die Lösung
+Zum entwickeln wird gerade eine sqlite "Datenbank" genutzt. 
 ```
-pip install dbt-core
-pip install dbt-sqlite
+pip install dbt-core==1.1.2
+pip install dbt-sqlite==1.1.3
 ```
 Der Inhalt des `.profiles.yml` wäre in etwa
 ```
