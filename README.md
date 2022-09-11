@@ -6,9 +6,7 @@ Themen, die bei diesem Workshop behandelt werden sollen sind:
 1. *macros*: Jinja Macros sind ein zentrales Feature von dbt und erweitern stark die Möglichkeiten, die man durch SQL im ELT-Prozess hat  
 2. *incremental*: Incremental Loads haben zum Beispiel Performanz-Vorteile gegenüber Full Loads, kommen aber auch mit zusätzlichen Anforderungen zu Design-Fragen und Komplexität  
 
-## Projekt-Skizze
-
-
+**Details zum Aufbau des dbt Projektes findest du im [dbt Ordner](dbt_workshop/README.md).**
 
 ## Installation
 *ACHTUNG* Das Projekt ist ein Work in Progress und es kann nicht garantiert werden, dass die Installation immer 100%ig funktioniert.  
