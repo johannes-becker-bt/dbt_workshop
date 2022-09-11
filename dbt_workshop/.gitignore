@@ -2,4 +2,7 @@
 target/
 dbt_packages/
 logs/
-data/
+# we don't want to store the sqlite databases in git but...
+data/*
+# .. we need the data folder otherwise it cannot store them
+!data/.gitkeep

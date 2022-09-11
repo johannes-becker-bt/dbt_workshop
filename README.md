@@ -19,9 +19,9 @@ Der Inhalt des `.profiles.yml` wäre in etwa
 ```
 dbt_workshop:
 
-  target: dev
+  target: sqlite_dev
   outputs:
-    dev:
+    sqlite_dev:
       type: sqlite
 
       # sqlite locks the whole db on writes so anything > 1 won't help
@@ -37,7 +37,6 @@ dbt_workshop:
       # connect schemas to paths: at least one of these must be 'main'
       schemas_and_paths:
         main: 'data/etl.sqlite3'
-        A1_FAKE_STAGE: 'data/A1_FAKE_STAGE.sqlite3'
 
       # directory where all *.db files are attached as schema, using base filename
       # as schema name, and where new schema are created. this can overlap with the dirs of
