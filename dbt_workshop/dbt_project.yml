@@ -34,9 +34,18 @@ seeds:
 
 models:
   dbt_workshop:
-    A1_FAKE_STAGE:
-      +schema: "{{ 'FAKE_STAGE' if 'sqlite' not in target.name else None }}"
-      +materialized: table
-    A2_INCREMENTAL_WAREHOUSE:
-      +schema: "{{ 'WAREHOUSE' if 'sqlite' not in target.name else None }}"
-      +materialized: incremental
+    STAGE:
+      PENGUIN:
+        +schema: "{{ 'stg_pen' if 'sqlite' not in target.name else None }}"
+        A1_STAGE:
+          +materialized: view
+        A2_PSA:
+          +materialized: incremental
+    # CORE: # Let's skip the core for this example
+    MART:
+      STATS:
+        +schema: "{{ 'mart_sts' if 'sqlite' not in target.name else None }}"
+        A3_VIEWS:
+          +materialized: view
+        A4_TABLES:
+          +materialized: table
