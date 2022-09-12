@@ -11,6 +11,6 @@ SELECT
 {{create_key(['penguin_island_id','island'])}} as penguin_key,
 *,
 CASE WHEN RANDOM()<0 THEN 0 ELSE 1 END as is_the_penguin_happy 
-FROM {{ref('raw_penguins')}}
+FROM {{ref('seed_penguins')}}
 -- Die Forscher analysieren nicht jeden Pinguin jedes Mal
 WHERE RANDOM()>0
