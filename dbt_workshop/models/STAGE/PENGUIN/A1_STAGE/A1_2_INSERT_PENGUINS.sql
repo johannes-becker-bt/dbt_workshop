@@ -10,9 +10,11 @@ Als Beispiel gibt es im Ordner macros den Adapter sqlite__curent_timestamp
 Beachte, dass der Incremental Load hier einen unique_key aus zwei Spalten benötigt.
 */
 SELECT 
-{{create_key(['penguin_island_id','island'])}} as penguin_key,
+{{create_key(['penguin_island_id','island'])}} as business_key,
 *,
 CASE WHEN RANDOM()<0 THEN 0 ELSE 1 END as is_the_penguin_happy,
+MOD(RANDOM(),2)+1 as scientist_id, -- id des Wissenschaftlers auf der Insel 
+MOD(RANDOM(),4)+1 as assistant_id, -- id des Assistenten auf der Insel
 {{current_timestamp()}} as insert_ts
 FROM {{ref('seed_penguins')}}
 -- Die Forscher analysieren nicht jeden Pinguin jedes Mal

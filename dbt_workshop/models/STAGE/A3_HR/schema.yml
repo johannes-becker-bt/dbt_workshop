@@ -1,0 +1,15 @@
+version: 2
+
+# Man sieht hier gut wie wertvoll es ist, eine einheitliche Logik bei der Keybennenung zu haben
+
+models:
+  - name: A3_1_assstnts
+    columns:
+      - name: business_key
+        tests:
+          - unique
+  - name: A3_2_scntsts
+    columns:
+      - name: business_key
+        tests:
+          - unique

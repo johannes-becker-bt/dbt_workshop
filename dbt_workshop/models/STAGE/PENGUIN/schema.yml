@@ -1,0 +1,26 @@
+version: 2
+
+# Man sieht hier gut wie wertvoll es ist, eine einheitliche Logik bei der Keybennenung zu haben
+
+models:
+  - name: A1_1_UPDATE_PENGUINS
+    columns:
+      - name: business_key
+        tests:
+          - unique
+  - name: A1_2_INSERT_PENGUINS
+    columns:
+      - name: business_key
+        tests:
+          - unique
+  - name: A2_1_PENGUIN_STATUS
+    columns:
+      - name: business_key
+        tests:
+          - unique
+  - name: A2_2_PENGUIN_SATELLITE
+    columns:
+      # allerdings ist "wenn man einen Satellite hat, ist der Schlüssel key + insert_ts" ja auch noch einheitlich
+      - name: business_key||insert_ts
+        tests:
+          - unique
