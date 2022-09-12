@@ -41,7 +41,13 @@ models:
           +materialized: view
         A2_PSA:
           +materialized: incremental
-    # CORE: # Let's skip the core for this example
+      A3_HR:
+        +schema: "{{ 'stg_hr' if 'sqlite' not in target.name else None }}"
+        +materialized: view
+    CORE:
+      A4_MAIN:
+        +schema: "{{ 'core' if 'sqlite' not in target.name else None }}"
+        +materialized: view    
     MART:
       STATS:
         +schema: "{{ 'mart_sts' if 'sqlite' not in target.name else None }}"
