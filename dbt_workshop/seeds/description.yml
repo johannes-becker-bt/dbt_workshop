@@ -8,9 +8,9 @@ seeds:
     description: some further facts about each species 
   # seeds simulating source tables where someone typed in all the existing scientists and assistants.
   # The person naming this table did not like vowels, making it nearly unreadable
-  - name: seed_assstnts
+  - name: src_assstnts
     description: Assistants table, containing the persons helping scientists with their observations.
-  - name: seed_scntsts
+  - name: src_scntsts
     description: Scientists table, containing the scientists that are observing the penguins.
   # seeds containing all the existing penguins (the actual source simulation is then created with random numbers in the stage tables)
   - name: seed_penguins
