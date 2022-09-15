@@ -30,7 +30,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 ## because sqlite does not handle schemas very well
 ## in a "normal" database we would like to separate stage from core etc.  
 seeds:
-  +schema: "{{ 'SEED' if 'sqlite' not in target.name else None}}"
+  +schema: "{{ 'seed' if 'sqlite' not in target.name else None}}"
 
 models:
   dbt_workshop:
@@ -38,12 +38,12 @@ models:
       PENGUIN:
         +schema: "{{ 'stg_pen' if 'sqlite' not in target.name else None }}"
         A1_STAGE:
-          +materialized: view
+          +materialized: table
         A2_PSA:
           +materialized: incremental
       A3_HR:
         +schema: "{{ 'stg_hr' if 'sqlite' not in target.name else None }}"
-        +materialized: view
+        +materialized: table
     CORE:
       A4_DIMS:
         +schema: "{{ 'core_dim' if 'sqlite' not in target.name else None }}"
