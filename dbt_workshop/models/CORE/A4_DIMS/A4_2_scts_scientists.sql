@@ -1,5 +1,5 @@
 SELECT
-    {{ create_key(['business_key'])}} as asst_id,
+    {{ create_key(['business_key'])}} as scts_id,
     business_key,
     -- diskutiere mit deinem Nachbarn, wie man FKs in der Tabelle einführt
     isl as ilnd_island_id, 
