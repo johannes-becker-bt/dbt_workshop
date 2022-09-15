@@ -20,7 +20,7 @@ models:
           - unique
   - name: A2_2_PENGUIN_SATELLITE
     columns:
-      # allerdings ist "wenn man einen Satellite hat, ist der Schlüssel key + insert_ts" ja auch noch einheitlich
-      - name: business_key||insert_ts
+      # allerdings ist "wenn man einen Satellite hat, ist der Schlüssel key + observation_ts" ja auch noch einheitlich
+      - name: business_key||observation_ts
         tests:
           - unique

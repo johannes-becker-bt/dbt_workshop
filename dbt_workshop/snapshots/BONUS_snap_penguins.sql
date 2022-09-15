@@ -11,7 +11,7 @@ Diskutiere mit deinem Nachbarn, welche Tabelle du bevorzugst:
       target_schema='main',
       unique_key='business_key',
       strategy='timestamp',
-      updated_at='insert_ts'
+      updated_at='observation_ts'
     )
 }}
 

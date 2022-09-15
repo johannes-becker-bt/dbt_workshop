@@ -6,8 +6,8 @@ Auf das niemand befördert wird...
 */
 SELECT
     {{ create_key(['business_key'])}} as asst_id,
-    business_key,
     -- diskutiere mit deinem Nachbarn, wie man FKs in der Tabelle einführt
+    id as assistant_on_island_id,
     isl as ilnd_island_id, 
     fst as first_name,
     lst as last_name,
