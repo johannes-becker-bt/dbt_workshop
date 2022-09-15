@@ -36,11 +36,11 @@ dbt_workshop:
 
       # connect schemas to paths: at least one of these must be 'main'
       schemas_and_paths:
-        main: 'data/etl.sqlite3'
+        main: 'dwh/etl.sqlite3'
 
       # directory where all *.db files are attached as schema, using base filename
       # as schema name, and where new schema are created. this can overlap with the dirs of
       # files in schemas_and_paths as long as there's no conflicts.
-      schema_directory: 'data'
+      schema_directory: 'dwh'
 
 ```
