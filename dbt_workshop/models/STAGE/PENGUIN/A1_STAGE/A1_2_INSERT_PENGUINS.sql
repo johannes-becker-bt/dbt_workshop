@@ -13,9 +13,9 @@ SELECT
 {{create_key(['penguin_island_id','island'])}} as business_key,
 *,
 CASE WHEN RANDOM()<0 THEN 0 ELSE 1 END as is_the_penguin_happy,
-MOD(RANDOM(),2)+1 as scientist_id, -- id des Wissenschaftlers auf der Insel 
-MOD(RANDOM(),4)+1 as assistant_id, -- id des Assistenten auf der Insel
-{{current_timestamp()}} as insert_ts
+abs(RANDOM() % 2)+1 as scientist_id, -- Fake-id des Wissenschaftlers auf der Insel 
+abs(RANDOM() % 4)+1 as assistant_id, -- Fake-id des Assistenten auf der Insel
+{{current_timestamp()}} as observation_ts
 FROM {{ref('seed_penguins')}}
 -- Die Forscher analysieren nicht jeden Pinguin jedes Mal
 WHERE RANDOM()>0

@@ -45,12 +45,12 @@ models:
         +schema: "{{ 'stg_hr' if 'sqlite' not in target.name else None }}"
         +materialized: table
     CORE:
-      A4_DIMS:
+      DIMS:
         +schema: "{{ 'core_dim' if 'sqlite' not in target.name else None }}"
         +materialized: table 
-      A5_FACTS:
+      FACTS:
         +schema: "{{ 'core_fct' if 'sqlite' not in target.name else None }}"
-        +materialized: view            
+        +materialized: table            
     MART:
       STATS:
         +schema: "{{ 'mart_sts' if 'sqlite' not in target.name else None }}"
