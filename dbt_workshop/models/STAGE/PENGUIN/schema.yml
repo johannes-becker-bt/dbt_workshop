@@ -4,23 +4,37 @@ version: 2
 
 models:
   - name: A1_1_UPDATE_PENGUINS
+    description: Staged penguin data from our penguin seed csv.
     columns:
       - name: business_key
+        description: Created business key by use of self-written macro create_key.
         tests:
           - unique
+          - not_null
+      - name: species
+        description: "{{ doc('seed_overview') }}"
+        tests:
+          - accepted_values:
+              values: ['Adelie', 'Gentoo', 'Chinstrap']
   - name: A1_2_INSERT_PENGUINS
+    description: Staged penguin data from our penguin seed csv.
     columns:
       - name: business_key
+        description: Created business key by use of self-written macro create_key.
         tests:
           - unique
+          - not_null
   - name: A2_1_PENGUIN_STATUS
     columns:
       - name: business_key
+        description: Created business key by use of self-written macro create_key.
         tests:
           - unique
+          - not_null
   - name: A2_2_PENGUIN_SATELLITE
     columns:
       # allerdings ist "wenn man einen Satellite hat, ist der Schlüssel key + observation_ts" ja auch noch einheitlich
       - name: business_key||observation_ts
         tests:
           - unique
+          - not_null
